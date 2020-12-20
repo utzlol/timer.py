@@ -1,22 +1,23 @@
 import time
 
-a = 19
+a = 243532
 z = 0
  
 
-if ".0" in str(a/5) and len(str(a/5)) == 3:
-	print(a)
-	print("opsi pertama")
+while type(a) and type(z) == int:
+	b = a/3
+	b = str(b)
+	b = b.split('.')[1]
+	if b[:1] == '0' and len(str(b)) == 1:
+		print(a)
+		print("opsi pertama")
+		break
 	
-else:
-	while ".0" not in str(a/5) and len(str(a/5)) != 3:
-		print(a/5)
-		print(".0" in str(a/5) and len(str(a/5)) == 3)
-		print(f"{a} and {z}")
-		print(f"{a}/5")
-		a = a - 1
-		z = z + 1
-		time.sleep(2)
 	else:
-		print(f"Jadi {a} + {z}")
-		print("ini else terakhir")
+		print(f"{a} and {z}")
+		print('proses')
+		a = int(a) - 1
+		z = z + 1
+#		time.sleep(1)
+else:
+	print("Only input number!")
