@@ -1,34 +1,25 @@
 import time
 
-a = 0
-repeat = 0
-	
+second = 0
+minute = 0
+hour = 0
 
-try:
-	while True:
-		print(a)
-		time.sleep(1)
-		a = a + 1
-except:
-	b = a/60
-	if b == int:	
-		if b >= 60:
-			c = b/60
-			if c == int:
-				if c == 1:
-					print(f"{c} hour")
-				else:
-					print(f"{c} hours")
-			else:
-				while True:
-					b = b - 2
-					repeat = repeat + 1
-				else:
-				
-		else:
-			if b == 1:
-				print(f"{b} minute")
-			else:
-				print(f"{b} minute")
-	else:
-			
+while True:
+	if second < 10 :
+		second = f"0{second}"
+	if minute < 10:
+		minute = f"0{minute}"
+	if hour < 10:
+		hour = f"0{hour}"
+	print(f"{hour}:{minute}:{second}", end='\r')
+	time.sleep(1)
+	second = int(second) + 1
+	minute = int(minute)
+	hour = int(hour)
+	if second == 60:
+		minute = int(minute) + 1
+		second = 0
+	if minute == 60:
+		hour = int(hour) + 1
+		minute = 0
+	
