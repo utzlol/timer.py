@@ -17,9 +17,9 @@ while True:
 	minute = int(minute)
 	hour = int(hour)
 	if second == 60:
-		minute = int(minute) + 1
+		minute = minute + 1
 		second = 0
 	if minute == 60:
-		hour = int(hour) + 1
+		hour = hour + 1
 		minute = 0
 	
